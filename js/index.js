@@ -39,4 +39,64 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', './img/logo.png')
+
+
+const nav = document.querySelector("nav")
+nav.children[0].textContent = siteContent["nav"]["nav-item-1"]
+nav.children[1].textContent = siteContent["nav"]["nav-item-2"]
+nav.children[2].textContent = siteContent["nav"]["nav-item-3"]
+nav.children[3].textContent = siteContent["nav"]["nav-item-4"]
+nav.children[4].textContent = siteContent["nav"]["nav-item-5"]
+nav.children[5].textContent = siteContent["nav"]["nav-item-6"]
+
+const cta = document.querySelector(".cta-text")
+const header = siteContent["cta"]["h1"].split(' ')
+const headerComp = header[0] + "<br>" + header[1] + "<br>" + header[2]
+cta.children[0].innerHTML = headerComp
+cta.children[1].innerHTML = siteContent["cta"]["button"]
+
+let ctaimg = document.getElementById("cta-img");
+ctaimg.setAttribute('src', 'img/header-img.png')
+
+const titleFeatures = document.querySelector(".text-content h4:nth-of-type(1)")
+titleFeatures.textContent = siteContent["main-content"]["features-h4"]
+const pgFeatures = document.querySelector(".text-content p:nth-of-type(1)")
+pgFeatures.textContent = siteContent["main-content"]["features-content"]
+
+// const titleAbout = document.querySelector(".text-content h4:nth-of-type(2)")
+// titleAbout.textContent = siteContent["main-content"]["about-h4"]
+// const pgAbout = document.querySelector(".text-content p:nth-of-type(2)")
+// pgAbout.textContent = siteContent["main-content"]["about-content"]
+
+let midimg = document.getElementById("middle-img")
+midimg.setAttribute('src', 'img/mid-page-accent.jpg')
+
+// const titleServices = document.querySelector(".text-content h4:nth-of-type(3))")
+// titleServices.textContent = siteContent["main-content"]["services-h4"]
+// const pgServices = document.querySelector(".text-content p:nth-of-type(3)")
+// pgServices.textContent = siteContent["main-content"]["services-content"]
+
+// const titleProduct = document.querySelector(".text-content h4:nth-of-type(4)")
+// titleProduct.textContent = siteContent["main-content"]["product-h4"]
+// const pgProduct = document.querySelector(".text-content p:nth-of-type(4)")
+// pgProduct.textContent = siteContent["main-content"]["product-content"]
+
+// const titleVision = document.querySelector(".text-content h4:nth-of-type(5)")
+// titleVision.textContent = siteContent["main-content"]["vision-h4"]
+// const pgVision = document.querySelector(".text-content p:nth-of-type(5)")
+// pgVision.textContent = siteContent["main-content"]["vision-content"]
+
+//  <div class="top-content">
+//                 <div class="text-content">
+//                     <h4>Features</h4>
+//                     <p>Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio,
+//                         in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus
+//                         scelerisque quis.</p>
+//                 </div>
+//                 <div class="text-content">
+//                     <h4>About</h4>
+//                     <p>About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in
+//                         interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus
+//                         scelerisque quis.</p>
+//                 </div>
