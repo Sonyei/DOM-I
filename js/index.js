@@ -38,10 +38,13 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', './img/logo.png')
 
+
 //nav links
+
 
 const nav = document.querySelector("nav")
 nav.children[0].textContent = siteContent["nav"]["nav-item-1"]
@@ -52,12 +55,43 @@ nav.children[4].textContent = siteContent["nav"]["nav-item-5"]
 nav.children[5].textContent = siteContent["nav"]["nav-item-6"]
 
 
+// Updated nav links
+
+// From Max Maxwell to Everyone:  09:38 PM
+// const newLink = document.createElement('a')
+// newLink.textContent = 'Turbo'
+// newLink.href = '#'
+// newLink.id = 'linkOne'
+// document.querySelector('nav').appendChild(newLink)
+
+// const newLink2 = document.createElement('a')
+// newLink2.textContent = 'Hyperspeed'
+// newLink2.href = '#'
+// newLink2.id = 'linkTwo'
+// document.querySelector('nav').prepend(newLink2)
+
+const firstLink = document.createElement("a")
+const secondLink = document.createElement("a")
+
+
+nav.prepend(firstLink)
+nav.appendChild(secondLink)
+firstLink.href = "#"
+firstLink.textContent = "Linketh"
+secondLink.href = "#"
+secondLink.textContent = "Linkzz"
+
+const updatedLinks = document.querySelectorAll("nav a")
+updatedLinks.forEach((g) => {
+  g.style.color = "green"
+})
+
 //header image and title
 
 const cta = document.querySelector(".cta-text")
 const header = siteContent["cta"]["h1"].split(' ')
 cta.children[0].innerHTML = header[0] + "<br>" + header[1] + "<br />" + header[2]
-cta.children[1].innerHTML = siteContent["cta"]["button"]
+cta.children[1].textContent = siteContent["cta"]["button"]
 ctaimg = document.getElementById("cta-img");
 ctaimg.setAttribute('src', siteContent.cta["img-src"])
 
@@ -73,10 +107,10 @@ hTitle[3].textContent = siteContent["main-content"]["product-h4"]
 hTitle[4].textContent = siteContent["main-content"]["vision-h4"]
 
 hPara[0].textContent = siteContent["main-content"]["features-content"]
-hPara[1].textContent = siteContent["main-content"]["features-content"]
-hPara[2].textContent = siteContent["main-content"]["features-content"]
-hPara[3].textContent = siteContent["main-content"]["features-content"]
-hPara[4].textContent = siteContent["main-content"]["features-content"]
+hPara[1].textContent = siteContent["main-content"]["about-content"]
+hPara[2].textContent = siteContent["main-content"]["services-content"]
+hPara[3].textContent = siteContent["main-content"]["product-content"]
+hPara[4].textContent = siteContent["main-content"]["vision-content"]
 
 //middle image
 
