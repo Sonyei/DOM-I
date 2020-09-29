@@ -59,33 +59,31 @@ cta.children[1].innerHTML = siteContent["cta"]["button"]
 let ctaimg = document.getElementById("cta-img");
 ctaimg.setAttribute('src', 'img/header-img.png')
 
-const titleFeatures = document.querySelector(".text-content h4:nth-of-type(1)")
-titleFeatures.textContent = siteContent["main-content"]["features-h4"]
-const pgFeatures = document.querySelector(".text-content p:nth-of-type(1)")
-pgFeatures.textContent = siteContent["main-content"]["features-content"]
 
-// const titleAbout = document.querySelector(".text-content h4:nth-of-type(2)")
-// titleAbout.textContent = siteContent["main-content"]["about-h4"]
-// const pgAbout = document.querySelector(".text-content p:nth-of-type(2)")
-// pgAbout.textContent = siteContent["main-content"]["about-content"]
+// const cards = document.querySelectorAll('.card');
+// console.log(cards)
+// const secondCard = cards[1];
+// console.log(secondCard)
+// cards.forEach((card, idx) => {
+//     const h2 = card.querySelector('h2')
+//     const h3 = card.querySelector('h3')
+//     console.log(h2)
+//     h2.textContent = data[idx].heading
+//     h3.textContent = 'DOM surgery is fun'
+// })
+
+const topSections = document.querySelectorAll(".text-content")
+console.log(topSections)
+topSections.forEach((section, i) => {
+  const h4 = section.querySelector('h4')
+  const p = section.querySelector('p')
+  h4.textContent = siteContent["main-content"][i][".text-content"];
+  p.textContent = siteContent["main-content"][i][".text-content"];
+})
 
 let midimg = document.getElementById("middle-img")
 midimg.setAttribute('src', 'img/mid-page-accent.jpg')
 
-// const titleServices = document.querySelector(".text-content h4:nth-of-type(3))")
-// titleServices.textContent = siteContent["main-content"]["services-h4"]
-// const pgServices = document.querySelector(".text-content p:nth-of-type(3)")
-// pgServices.textContent = siteContent["main-content"]["services-content"]
-
-// const titleProduct = document.querySelector(".text-content h4:nth-of-type(4)")
-// titleProduct.textContent = siteContent["main-content"]["product-h4"]
-// const pgProduct = document.querySelector(".text-content p:nth-of-type(4)")
-// pgProduct.textContent = siteContent["main-content"]["product-content"]
-
-// const titleVision = document.querySelector(".text-content h4:nth-of-type(5)")
-// titleVision.textContent = siteContent["main-content"]["vision-h4"]
-// const pgVision = document.querySelector(".text-content p:nth-of-type(5)")
-// pgVision.textContent = siteContent["main-content"]["vision-content"]
 
 //  <div class="top-content">
 //                 <div class="text-content">
