@@ -41,6 +41,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', './img/logo.png')
 
+//nav links
 
 const nav = document.querySelector("nav")
 nav.children[0].textContent = siteContent["nav"]["nav-item-1"]
@@ -50,40 +51,53 @@ nav.children[3].textContent = siteContent["nav"]["nav-item-4"]
 nav.children[4].textContent = siteContent["nav"]["nav-item-5"]
 nav.children[5].textContent = siteContent["nav"]["nav-item-6"]
 
+
+//header image and title
+
 const cta = document.querySelector(".cta-text")
 const header = siteContent["cta"]["h1"].split(' ')
-const headerComp = header[0] + "<br>" + header[1] + "<br>" + header[2]
-cta.children[0].innerHTML = headerComp
+cta.children[0].innerHTML = header[0] + "<br>" + header[1] + "<br />" + header[2]
 cta.children[1].innerHTML = siteContent["cta"]["button"]
+ctaimg = document.getElementById("cta-img");
+ctaimg.setAttribute('src', siteContent.cta["img-src"])
 
-let ctaimg = document.getElementById("cta-img");
-ctaimg.setAttribute('src', 'img/header-img.png')
+//top content
 
+const hTitle = document.querySelectorAll(".text-content h4")
+const hPara = document.querySelectorAll(".text-content p")
 
-// const cards = document.querySelectorAll('.card');
-// console.log(cards)
-// const secondCard = cards[1];
-// console.log(secondCard)
-// cards.forEach((card, idx) => {
-//     const h2 = card.querySelector('h2')
-//     const h3 = card.querySelector('h3')
-//     console.log(h2)
-//     h2.textContent = data[idx].heading
-//     h3.textContent = 'DOM surgery is fun'
-// })
+hTitle[0].textContent = siteContent["main-content"]["features-h4"]
+hTitle[1].textContent = siteContent["main-content"]["about-h4"]
+hTitle[2].textContent = siteContent["main-content"]["services-h4"]
+hTitle[3].textContent = siteContent["main-content"]["product-h4"]
+hTitle[4].textContent = siteContent["main-content"]["vision-h4"]
 
-const topSections = document.querySelectorAll(".text-content")
-console.log(topSections)
-topSections.forEach((section, i) => {
-  const h4 = section.querySelector('h4')
-  const p = section.querySelector('p')
-  h4.textContent = siteContent["main-content"][i][".text-content"];
-  p.textContent = siteContent["main-content"][i][".text-content"];
-})
+hPara[0].textContent = siteContent["main-content"]["features-content"]
+hPara[1].textContent = siteContent["main-content"]["features-content"]
+hPara[2].textContent = siteContent["main-content"]["features-content"]
+hPara[3].textContent = siteContent["main-content"]["features-content"]
+hPara[4].textContent = siteContent["main-content"]["features-content"]
 
-let midimg = document.getElementById("middle-img")
-midimg.setAttribute('src', 'img/mid-page-accent.jpg')
+//middle image
 
+const midimg = document.getElementById("middle-img")
+midimg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//bottom content
+
+const contactTitle = document.querySelector(".contact h4")
+const contactPara = document.querySelectorAll(".contact p")
+
+contactTitle.textContent = siteContent["contact"]["contact-h4"]
+const midContent = siteContent["contact"]["address"].split(' ')
+contactPara[0].innerHTML = midContent[0] + ' ' + midContent[1] + ' '  + midContent[2] + ' '  + midContent[3] + "<br />" + midContent[4] + ' ' + midContent[5]
+contactPara[1].textContent = siteContent["contact"]["phone"]
+contactPara[2].textContent = siteContent["contact"]["email"]
+
+//footer
+
+const foot = document.querySelector("footer p")
+foot.textContent = siteContent["footer"]["copyright"]
 
 //  <div class="top-content">
 //                 <div class="text-content">
